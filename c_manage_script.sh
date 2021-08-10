@@ -17,12 +17,9 @@ if [ "$user_input"  = "s" ]; then
 	$SHELL
 else
 	echo "End session"
-	#https://www.cyberciti.biz/faq/xclip-linux-insert-files-command-output-intoclipboard/
-	echo $current_git_token | xclip
-	xclip -o
+	echo $current_git_token
 	cd $staging_path
 	git add *
 	git commit -m"update"
 	git push
 fi
-
