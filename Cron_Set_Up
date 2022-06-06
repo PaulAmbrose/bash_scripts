@@ -1,1 +1,6 @@
 https://crontab-generator.org/
+
+#Basic update - daily at midnight log date
+
+MAILTO="pablo_rose34@hotmail.com"
+0 0 * * * echo "$(date)" >> //home/user/Desktop/logs/Cronlog1.txt
