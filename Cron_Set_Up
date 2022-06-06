@@ -1,7 +1,43 @@
 https://crontab-generator.org/
 https://www.easycron.com/user
+https://www.hostinger.co.uk/tutorials/cron-job?ppc_campaign=google_search_generic_hosting_all&bidkw=defaultkeyword&lo=1006964&gclid=CjwKCAjwy_aUBhACEiwA2IHHQHiraZX1TkCBzNEpLDppX5K33Cr75_KqXfKwtGGUURf1id3rGOxzlhoC7HYQAvD_BwE
 
-#Basic update - daily at midnight log date
-
-MAILTO="pablo_rose34@hotmail.com"
+/* #Basic update - daily at midnight log date
 0 0 * * * echo "$(date)" >> //home/user/Desktop/logs/Cronlog1.txt
+
+To create or edit a crontab file, enter the following into the command line:
+
+crontab -e
+If no crontab files are found in your system, the command will automatically create a new one. crontab -e allows you to add, edit, and delete cron jobs.
+
+You’ll need a text editor like vi or nano to edit a crontab file. When entering crontab -e for the first time, you’ll be asked to choose which text editor you want to edit the file with.
+
+To see a list of active scheduled tasks in your system, enter the following command:
+
+crontab -l
+If your system has multiple users, you can view their crontab file lists by entering the following command as a superuser:
+
+crontab -u username -l
+You can also easily edit other users’ scheduled jobs by typing the following crontab command:
+
+sudo su crontab -u username -e
+To give yourself root privileges, append sudo su to the beginning of the command. Some commands, including this one, can only be executed by root users.
+
+Lastly, to delete all scheduled tasks in your crontab file and start fresh, type the following command:
+
+crontab -r
+Alternatively, the following command is the same as crontab -r, except it will prompt the user with a yes/no option before removing the crontab:
+
+crontab -i
+In addition to crontab, the root user can also add cron jobs to the etc/cron.d directory. It’s most suitable for running scripts for automatic installations and updates.
+
+Keep in mind that the user adding cron jobs to this directory must have root access and conform to run-parts’ naming conventions.
+
+Alternatively, a root user can move their scripts into the following directories to schedule their execution:
+
+/etc/cron.hourly/ – Run all scripts once an hour
+/etc/cron.daily/ – Run once a day.
+/etc/cron.weekly/ – Run once a week.
+/etc/cron.monthly/ – Run once a month.
+
+*/
