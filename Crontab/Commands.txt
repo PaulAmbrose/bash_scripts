@@ -1,6 +1,0 @@
-Basic Commands
-
-crontab -e    Edit crontab file, or create one if it doesn’t already exist.
-crontab -l    crontab list of cronjobs , display crontab file contents.
-crontab -r    Remove your crontab file.
-crontab -v    Display the last time you edited your crontab file.
