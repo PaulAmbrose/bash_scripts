@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 https://github.com/PaulAmbrose/plan.git
 https://github.com/PaulAmbrose/bash_scripts.git
 https://github.com/PaulAmbrose/Learn_C_The_Hard_Way.git
