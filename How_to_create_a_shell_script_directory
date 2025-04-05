@@ -1,4 +1,4 @@
 To allow you to run a script in any directory.
 Create hidden folder at the home level (use . at the start).
-Enter following command echo 'export PATH="$PATH:$HOME/.foldername"' >> $HOME/.profile'
+Enter following command echo 'export PATH="$PATH:$HOME/.foldername"' >> $HOME/.profile
 Close and reopen a new terminal. In any folder you can run a script in the new folder by typing its name.
