@@ -1,0 +1,5 @@
+Identify UUID:  sudo blkid
+Create Mount Point: sudo mkdir /mnt/my_usb_data
+Edit fstab:  sudo nano /etc/fstab
+
+new line UUID="C09789-blarblar" /mnt/filetransferusb vfat defaults,nofail 0 0 
