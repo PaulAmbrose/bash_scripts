@@ -1,0 +1,12 @@
+Locations
+
+	File share:
+		/srv/samba/share/
+	USB:
+		mnt/filetransferusb/
+
+clearfileshare.sh	deletes all files in the sharefile location
+clearusb.sh		deletes all files in the usb location
+fileshare.sh		navigates to the sharefile location
+transferusb.sh		navigates to the usb location
+usbcopyall.sh		copies all files from the usb to fileshare location
