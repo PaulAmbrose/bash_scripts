@@ -10,3 +10,4 @@ clearusb.sh		deletes all files in the usb location
 fileshare.sh		navigates to the sharefile location
 transferusb.sh		navigates to the usb location
 usbcopyall.sh		copies all files from the usb to fileshare location
+mountusb.sh		mounts USB stick to mnt/filetransferusb
