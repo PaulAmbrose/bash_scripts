@@ -3,19 +3,6 @@
 # Create .myscripts folder in home directory
 mkdir -p ~/.myscripts
 
-# Identify UUID (prints to screen)
-echo "Identifying UUID of connected devices..."
-sudo blkid
-
-# Create mount point
-sudo mkdir -p /mnt/my_usb_data
-
-# Reminder to edit fstab
-echo "Add the following line to /etc/fstab (edit will open now):"
-echo 'UUID="C09789-blarblar" /mnt/filetransferusb vfat defaults,nofail 0 0'
-sleep 3
-sudo nano /etc/fstab
-
 # Create clearfileshare.sh
 cat << 'EOF' > ~/.myscripts/clearfileshare.sh
 #!/bin/bash
