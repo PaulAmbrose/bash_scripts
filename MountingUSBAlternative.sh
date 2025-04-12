@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the mount point
-mount_point="/mnt/usb_drive"
+mount_point="/mnt/filetransferusb"
 
 # Check if the mount point exists, create it if not
 if [ ! -d "$mount_point" ]; then
