@@ -3,3 +3,29 @@ Create Mount Point: sudo mkdir /mnt/my_usb_data
 Edit fstab:  sudo nano /etc/fstab
 
 new line UUID="C09789-blarblar" /mnt/filetransferusb vfat defaults,nofail 0 0 
+
+Alternative:
+The easiest way to do this is to run this command in your terminal:
+
+Bash
+
+sudo fdisk -l
+This will list all the disks and partitions the server sees. Keep an eye out for a device that looks like your USB stick based on its size. It'll likely be something like /dev/sdb1, /dev/sdc1, etc. Make a note of this device name.
+
+
+sudo mkdir /mnt/usb_drive
+Finally, you can mount the USB stick to that directory using the device name you found earlier. Replace /dev/sdX1 with the actual device name of your USB stick and /mnt/usb_drive with the directory you created:
+
+
+sudo mount /dev/sdX1 /mnt/usb_drive
+That's it! You should now be able to access the files on your USB stick by navigating to the /mnt/usb_drive directory (or whatever directory you chose).
+
+A couple of extra things to keep in mind:
+
+Permissions: You might need to adjust the permissions of the mount point (/mnt/usb_drive) if you want to be able to write to the USB stick as a regular user. You can use the chmod command for this.
+
+Unmounting: When you're done, it's important to unmount the USB stick before physically removing it to prevent data corruption. You can do this with the following command:
+
+Bash
+
+sudo umount /mnt/usb_drive
