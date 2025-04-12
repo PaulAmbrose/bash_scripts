@@ -3,6 +3,13 @@
 # Create .myscripts folder in home directory
 mkdir -p ~/.myscripts
 
+# Create mountusb.sh
+cat << 'EOF' > ~/.myscripts/mountusb.sh
+#!/bin/bash
+sudo mount /dev/sdb /mnt/filetransferusb
+echo "USB drive mounted at /mnt/filetransferusb"
+EOF
+
 # Create clearfileshare.sh
 cat << 'EOF' > ~/.myscripts/clearfileshare.sh
 #!/bin/bash
