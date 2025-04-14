@@ -50,4 +50,6 @@ EOF
 # Make all scripts executable
 chmod +x ~/.myscripts/*.sh
 
+'export PATH="$PATH:$HOME/.foldername"' >> $HOME/.profile
+
 echo "Setup complete. Scripts are in ~/.myscripts/"
